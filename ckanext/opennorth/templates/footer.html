@@ -1,0 +1,23 @@
+{% ckan_extends %}
+
+{% block footer_links %}
+              <li><a href="{{ h.url_for(controller='home', action='about') }}">{{ _('À propos de ce portail') }}</a></li>
+              <li><a href="{{ h.url_for(controller='ckanext.opennorth.controller:SuggestController', action='suggest_form') }}">Proposez un jeu de données</a></li>
+              <li><a href="/pages/faq">Foire aux questions</a></li>
+{% endblock %}
+
+
+{% block footer_links_ckan %}
+{% endblock %}
+
+{% block footer_lang %}
+{% endblock %}
+
+{% block footer_attribution %}
+          <ul class="unstyled">
+                          {% set api_url = 'http://docs.ckan.org/en/{0}/api.html'.format(g.ckan_doc_version) %}
+              <li><a href="/api/3">Accès à l'API du portail</a> (<a href="{{ api_url }}">Documentation</a>)</li>
+              <li><a href="{{ h.url_for(controller='ckanext.opennorth.controller:FollowController', action='follow') }}">Suivez-nous</a></li>
+          </ul>
+
+{% endblock %}

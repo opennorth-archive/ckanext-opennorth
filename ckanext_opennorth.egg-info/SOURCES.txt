@@ -1,0 +1,12 @@
+setup.py
+ckanext/__init__.py
+ckanext/opennorth/__init__.py
+ckanext/opennorth/controller.py
+ckanext/opennorth/plugin.py
+ckanext_opennorth.egg-info/PKG-INFO
+ckanext_opennorth.egg-info/SOURCES.txt
+ckanext_opennorth.egg-info/dependency_links.txt
+ckanext_opennorth.egg-info/entry_points.txt
+ckanext_opennorth.egg-info/namespace_packages.txt
+ckanext_opennorth.egg-info/not-zip-safe
+ckanext_opennorth.egg-info/top_level.txt

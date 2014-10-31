@@ -1,0 +1,42 @@
+{% extends "page.html" %}
+
+
+{% block primary_content %}
+  <article class="module">
+    <div class="module-content">
+      <h1 class="page-heading">Suivez-nous!</h1>
+
+      <h2>Suivez-vous sur Twitter</h2>
+      <p>Suivez<b> <a href="https://twitter.com/opennorth">@OpenNorth</a></b></p>
+
+      <h2>Notifications par courriel</h2>
+      <p>En créant un compte sur notre plateforme, vous pouvez recevoir des courriels automatiquement. Ceci se fait en trois étapes simples:</p>
+      <ol>
+        <li>Créez un {% link_for _('compte'), controller='user', action='register', class_='sub' %}.</li>
+        <li>Activez les notifications dans votre  
+{% if c.userobj %}
+<a href="{{ h.url_for(controller='user', action='edit', id=c.userobj.name) }}">configuration</a>.
+{% else %}
+configuration.
+{% endif %}
+        </li>
+        <li>Pour chaque élément qui vous intéresse (jeu de données, catégorie, tag, organisation) cliquez sur le bouton "S'abonner".</li>
+      </ol>
+
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary_content %}
+<div class="module module-narrow module-shallow">
+  <h2 class="module-heading">
+    <i class="icon-info-sign"></i>
+    {{ _('S\'abonner') }}
+  </h2>
+  <div class="module-content">
+    <p>
+      Suivez les nouveaux jeux de données! 
+    </p>
+  </div>
+</div>
+{% endblock %}

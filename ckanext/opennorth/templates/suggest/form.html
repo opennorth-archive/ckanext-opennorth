@@ -1,0 +1,26 @@
+{% extends "page.html" %}
+
+
+{% block primary_content %}
+  <article class="module">
+    <div class="module-content">
+      <h1 class="page-heading">Suggérez un jeu de données</h1>
+      {{ c.form | safe }}
+
+    </div>
+  </article>
+{% endblock %}
+
+{% block secondary_content %}
+<div class="module module-narrow module-shallow">
+  <h2 class="module-heading">
+    <i class="icon-info-sign"></i>
+    {{ _('Suggérez un jeu de données') }}
+  </h2>
+  <div class="module-content">
+    <p>
+      Nous maintenant un processus de libération des données. En suggérant les jeux de données qui vous intéressent, nous les ajouterons à notre processus. 
+    </p>
+  </div>
+</div>
+{% endblock %}

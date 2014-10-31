@@ -1,0 +1,23 @@
+{% ckan_extends %}
+
+{% block header_account_container_content %}
+{{ super() }}
+
+          <nav class="account not-authed">
+            <ul class="unstyled">
+              <li>{% link_for _('Demande de données'), controller='ckanext.opennorth.controller:SuggestController', action='suggest_form' %}</li>
+              <li>{% link_for _('Contact'), controller='ckanext.opennorth.controller:ContactController', action='contact_form' %}</li>
+            </ul>
+          </nav>
+
+{% endblock %}
+
+
+{% block header_site_navigation_tabs %}
+  {{ h.build_nav_main(
+    ('search', _('Données')),
+    ('group_index', _('Catégories')),
+    ('related_dashboard', _('Apps')),
+    ('organizations_index', _('Organizations')),
+  )}}
+{% endblock %}

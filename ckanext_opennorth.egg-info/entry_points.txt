@@ -1,0 +1,7 @@
+
+        [ckan.plugins]
+        # Add plugins here, e.g.
+        opennorth=ckanext.opennorth.plugin:OpennorthTemplatePlugin
+        opennorthfacet=ckanext.opennorth.plugin:OpennorthFacetPlugin
+        opennorthextrapages=ckanext.opennorth.plugin:OpennorthExtraPagesPlugin
+    
